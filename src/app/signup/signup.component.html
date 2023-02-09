@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+<form class="form" [formGroup] ="loginForm" (ngSubmit)="loginform()" #r="ngForm">
+  <label>FirstName</label>
+  <input type="text" formControlName="firstName" required/>
+  <br><br>
+  <label>LastName</label>
+  <input type="text" formControlName="lastName" required/>
+  <br><br>
+ <div>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+ </div>
+ 
+  <label>Gender</label>
+  <select formControlName="gender" id="gender" required>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+  <br><br>
+  <label>Age</label>
+  <input type="number" formControlName="age" />
+  <br><br>
+  <label>Resume</label>
+  <input type="file" id="resume" formControlName="resume"  accept=".pdf, .doc, .docx"/>
+ 
+  <br><br>
+  <button >signup</button>
+</form>
+</mat-card>
