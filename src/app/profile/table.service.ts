@@ -11,6 +11,10 @@ export class TableService {
   constructor(private http:HttpClient) { }
   table():Observable<any>{
     return this.http.get<any>(this.url)
+  }
+  datashare(userdata:any){
+    return userdata
 
   }
+  
 }

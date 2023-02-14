@@ -1,0 +1,36 @@
+
+
+<h2 mat-dialog-title>creating new data</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="example-form" [formGroup]="new_user">
+    <mat-form-field class="example-full-width">
+      <mat-label>id</mat-label>
+      <input type="number" matInput formControlName="id" >
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com"> 
+    </mat-form-field>
+
+   <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>firstname</mat-label>
+      <input type="text" matInput formControlName="first_name"  >
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>last_name</mat-label>
+      <input type="text" matInput formControlName="last_name"  >
+    </mat-form-field>
+    <br>
+    
+  </form>
+  
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="return_data()" cdkFocusInitial>create</button>
+</mat-dialog-actions>

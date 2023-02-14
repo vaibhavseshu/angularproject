@@ -14,6 +14,10 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'
+import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CreateComponent } from './create/create.component';
+import { UpdateComponent } from './profile/update/update.component';
 
 
 
@@ -23,6 +27,8 @@ import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'
     SignupComponent,
     LoginComponent,
     ProfileComponent,
+    CreateComponent,
+    UpdateComponent,
    
   ],
   imports: [
@@ -36,7 +42,8 @@ import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'
     MatCardModule,
     RouterModule,
     MatTableModule,
-    HttpClientModule
+    MatButtonModule,
+    HttpClientModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
