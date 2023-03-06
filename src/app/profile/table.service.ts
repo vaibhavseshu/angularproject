@@ -7,14 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class TableService {
   private url = 'https://reqres.in/api/users?page=2'
-
-  constructor(private http:HttpClient) { }
+   data:any;
+  constructor(private http:HttpClient) {
+    
+   }
   table():Observable<any>{
     return this.http.get<any>(this.url)
   }
   datashare(userdata:any){
-    return userdata
-
+    this.data = userdata;
+  }
+  getdata(){
+    return this.data
   }
   
 }

@@ -40,15 +40,14 @@ export class ProfileComponent implements OnInit {
   delete(n:any){
     this.dataSource.splice(n,1)
     this.dataSource=[...this.dataSource]
-
-    
   }
-  update(element:any){
-    console.log(element)
+  update(element:any,index:any){
     this.service.datashare(element)
     const dialogRef = this.dialog.open(UpdateComponent);
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`dialog result:${result}`);
+      console.log(result);
+      this.dataSource[index] = result;
+      this.dataSource = [...this.dataSource]
     })
     
   }

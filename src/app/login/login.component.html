@@ -1,6 +1,9 @@
-<mat-card class="example-card">
-    <form class="form" [formGroup] ="loginForm" (ngSubmit)="profile()" #r="ngForm" >
-      <h1>Log in</h1>
+ 
+    <form class="example-from" [formGroup] ="loginForm" (ngSubmit)="profile()" #r="ngForm" >
+      <mat-card class="example-card">
+      <mat-card-header class="mat-card-header">
+        <h1>Log in</h1>
+      </mat-card-header>
       <mat-form-field class="example-full-width">
         <mat-label>E-mail</mat-label>
         <input type="email" matInput placeholder="Email" formControlName="email"  id="email">
@@ -13,5 +16,6 @@
       <br>
       <button class="button" (click)="profile()">login</button>
       <button class="button" (click)="signup()">signup</button>
+    </mat-card>
     </form>
-  </mat-card>
+  
